@@ -1,0 +1,6 @@
+framework module LLBarrage {
+  umbrella header "LLBarrage-umbrella.h"
+
+  export *
+  module * { export * }
+}

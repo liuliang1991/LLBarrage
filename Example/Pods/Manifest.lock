@@ -1,0 +1,16 @@
+PODS:
+  - LLBarrage (0.1.0)
+
+DEPENDENCIES:
+  - LLBarrage (from `../`)
+
+EXTERNAL SOURCES:
+  LLBarrage:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  LLBarrage: a468a57dd71dfe0e31f4286e3bec46124f59a24e
+
+PODFILE CHECKSUM: 68c29b4a8bc385b1cecdc84fabacbb128d34df5a
+
+COCOAPODS: 1.5.3
