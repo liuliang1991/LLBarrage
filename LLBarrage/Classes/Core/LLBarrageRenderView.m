@@ -13,7 +13,6 @@
 @interface LLBarrageRenderView ()
 {
     dispatch_semaphore_t _barragesNumChangedLock;
-    dispatch_semaphore_t _multipleBarrageCellsLock;
 }
 //定时器，定时处理移出屏幕的弹幕
 @property (nonatomic, strong) NSTimer *timer;
@@ -51,7 +50,6 @@
     self = [super initWithFrame:frame];
     if (self) {
         _barragesNumChangedLock = dispatch_semaphore_create(1);
-        _multipleBarrageCellsLock = dispatch_semaphore_create(1);
         _barrageCellArr = [NSMutableArray array];
         _idAndClassDic = [NSMutableDictionary dictionary];
         _idAndCellsDic = [NSMutableDictionary dictionary];
@@ -274,9 +272,7 @@
             NSMutableArray *cellArr = [self.idAndCellsDic objectForKey:identifier];
             //控制每种cell的复用池数据最多5个
             if(cellArr.count<5){
-                dispatch_semaphore_wait(_multipleBarrageCellsLock, DISPATCH_TIME_FOREVER);
                 [cellArr addObject:barrageCell];
-                dispatch_semaphore_signal(_multipleBarrageCellsLock);
             }
         }
         height += presentationLayer.frame.size.height;
@@ -319,9 +315,7 @@
     NSMutableArray *cellArr = [self.idAndCellsDic objectForKey:identifier];
     if(cellArr.count){
         cell = [cellArr firstObject];
-        dispatch_semaphore_wait(_multipleBarrageCellsLock, DISPATCH_TIME_FOREVER);
         [cellArr removeObject:cell];
-        dispatch_semaphore_signal(_multipleBarrageCellsLock);
     }else{
         cell = [cellClass new];
     }
@@ -335,11 +329,6 @@
     NSMutableArray *cellArr = [self.idAndCellsDic objectForKey:identifier];
     if(cellArr.count){
         [cellArr removeAllObjects];
-    }else{
-        NSMutableArray *newCellArr = [NSMutableArray array];
-        LLBarrageCell *cell = [cellClass new];
-        [newCellArr addObject:cell];
-        [self.idAndCellsDic setObject:newCellArr forKey:identifier];
     }
 }
 

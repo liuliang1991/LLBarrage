@@ -16,7 +16,6 @@
 		99173A535A8CCDFD81B64ABE7EBE1FC6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
 		A39A6C692D48AFFB4473A156A087B2B8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
 		B8E8375BDA27A482117110345FAD4118 /* LLBarrage-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B485E945956BE4E1E6816499392103 /* LLBarrage-dummy.m */; };
-		F74F30ACF94E900FDE9519175F91D967 /* ReplaceMe.m in Sources */ = {isa = PBXBuildFile; fileRef = 465C0245E39BF5C5304143C6A54ED204 /* ReplaceMe.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,11 +44,9 @@
 		34D376F442495089CE7BE1140EF8BF85 /* LLBarrage-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LLBarrage-prefix.pch"; sourceTree = "<group>"; };
 		3D5CD04BD2A219EA3BE968912819D705 /* Pods-LLBarrage_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-LLBarrage_Tests-umbrella.h"; sourceTree = "<group>"; };
 		406D54885B46000EEA4D6FE153BA78FA /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		465C0245E39BF5C5304143C6A54ED204 /* ReplaceMe.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ReplaceMe.m; path = LLBarrage/Classes/ReplaceMe.m; sourceTree = "<group>"; };
 		56B485E945956BE4E1E6816499392103 /* LLBarrage-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LLBarrage-dummy.m"; sourceTree = "<group>"; };
 		5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		5DDF0376D1B0F3A60248ADBF1EC7FF6B /* Pods-LLBarrage_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LLBarrage_Example.release.xcconfig"; sourceTree = "<group>"; };
-		5EC5FA95C20B8F821E30C7CB9CCA57AC /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		6D2A590414ADC75B8FB3F06CC7E42507 /* Pods-LLBarrage_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LLBarrage_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		76EEA23A6ED34FB466468FE0B0308EEE /* Pods-LLBarrage_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LLBarrage_Example-frameworks.sh"; sourceTree = "<group>"; };
 		7B7E56578CDEBFF0B43FD8AA4EAE1991 /* Pods-LLBarrage_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LLBarrage_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
@@ -105,7 +102,6 @@
 		21A10E826537E4444D39D1B990B7771C /* LLBarrage */ = {
 			isa = PBXGroup;
 			children = (
-				465C0245E39BF5C5304143C6A54ED204 /* ReplaceMe.m */,
 				F1DE998A647862E222F064BEA22FC280 /* Pod */,
 				C4A0AB4FAA0556E43331BB2C8796B81C /* Support Files */,
 			);
@@ -222,7 +218,6 @@
 			children = (
 				B7655E4EBD34CDB4CDFE370DF5D6449A /* LICENSE */,
 				A03DAB46818E0E952F502658320339EC /* LLBarrage.podspec */,
-				5EC5FA95C20B8F821E30C7CB9CCA57AC /* README.md */,
 			);
 			name = Pod;
 			sourceTree = "<group>";
@@ -353,7 +348,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B8E8375BDA27A482117110345FAD4118 /* LLBarrage-dummy.m in Sources */,
-				F74F30ACF94E900FDE9519175F91D967 /* ReplaceMe.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
